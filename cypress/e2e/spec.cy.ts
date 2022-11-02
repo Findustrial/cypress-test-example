@@ -19,11 +19,11 @@ describe('My First Test', () => {
 
     cy.get('[data-testid="nextStepsCards"] button').as('nextStepBtns')
 
-
     cy.get('@nextStepBtns').should('have.length', 6).and($btn => {
       expect($btn.get(0).textContent, 'first item').to.equal('New Component')
       expect($btn.get(1).textContent, 'second item').to.equal('Angular Material')
     })
+
     // Click first element
     cy.get('@nextStepBtns').first().click()
     cy.contains('ng generate component xyz')

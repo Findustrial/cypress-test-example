@@ -14,6 +14,7 @@ it('stepper should default to 0', () => {
   cy.get(counterSelector).should('have.text', '0')
 })
 
+
 it('supports an "Input()" count that sets the value', () => {
   // Arrange
   cy.mount('<app-stepper [count]="100"></app-stepper>', {
